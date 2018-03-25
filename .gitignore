@@ -4,5 +4,7 @@ node_modules/
 *.log
 *.DS_Store
 
+.env
+
 # Client
 client/build/

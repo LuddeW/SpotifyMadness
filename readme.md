@@ -23,12 +23,28 @@ Setup autoformatting on save for JavaScript files by adding the following to you
 }
 ```
 
-### Start development server
+### Setup .env
+To make request to the Spotify API you need to make sure the server has a valid `clientId` and `clientSecret` from Spotify.
+Create a new file in the root of the repository and name it `.env`.
+Copy the content from `.env.template` and paste it into `.env` but add real values for `CLIENT_ID` and `CLIENT_SECRET`.
+
+## Developing
+When developing the application you need to start 2 servers, the client development server and the api server.
+
+### Api server
+From the root of the project:
+```
+npm run start:dev
+```
+This will start the api server with livereload whenever a file is saved.
+
+### Client development server
 Go to the `./client` folder and start the server by typing:
 ```
 npm run start
 ```
 Open your browser and navigate to http://localhost:3005
+
 
 ## Project structure
 

@@ -1,7 +1,14 @@
 import './styles/main.scss'
 
-import { showSection, isSectionActive } from './router'
+const searchSpotifyArtist = async artistQuery => {
+  const request = await fetch(`/api/spotify/search/${artistQuery}`)
 
-setInterval(() => {
-  showSection(isSectionActive('intro') ? 'login' : 'intro')
-}, 2000)
+  if (!request.ok) {
+    console.log(`Error response from server, ${request.status}`)
+  }
+
+  const response = await request.text()
+  console.log(response)
+}
+
+searchSpotifyArtist('Kendrick')
