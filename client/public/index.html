@@ -12,21 +12,52 @@
 </head>
 
 <body>
-  <!-- Intro -->
+  <!-- Search -->
   <section
-    class="section section--is-active"
-    data-section="intro"
+    class="section section--is-active search"
+    data-section="search"
   >
     <h1>Spotify Madness</h1>
+    <p>
+      Search for the artist or band you want to make a bracket with.
+    </p>
+
+    <input
+      class="search__input"
+      type="text"
+      placeholder="Enter artist or band name"
+      data-search-input
+    />
+
+    <ul
+      class="search__result-list"
+      data-result-list
+    >
+      <li
+        class="search__result-item"
+        data-result-item
+      ></li>
+    </ul>
   </section>
 
 
-  <!-- Login -->
+  <!-- Battle -->
   <section
-    class="section login"
-    data-section="login"
+    class="section battle"
+    data-section="battle"
   >
-    <h1>Login</h1>
+    <h1 data-artist-name></h1>
+
+    <div class="battle__items-container">
+      <div class="battle__item">
+
+
+        <div data-song-name></div>
+        <button>
+
+        </button>
+      </div>
+    </div>
   </section>
 </body>
 

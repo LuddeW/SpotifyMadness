@@ -1,0 +1,11 @@
+.search {
+  &__input {
+    border-bottom: 1px solid $black;
+    font-size: 2rem;
+    width: 100%;
+
+    &:focus {
+      border-bottom-color: $blue;
+    }
+  }
+}
