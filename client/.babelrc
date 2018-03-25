@@ -1,0 +1,33 @@
+{
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false,
+          "useBuiltIns": true,
+          "targets": {
+            "browsers": ["last 2 Chrome versions"]
+          }
+        }
+      ]
+    ],
+
+    "plugins": [
+      [
+        "transform-runtime",
+        {
+          "helpers": false,
+          "polyfill": false,
+          "regenerator": true
+        }
+      ],
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ],
+
+    "env": {
+      "production": {
+        "presets": ["minify"]
+      }
+    }
+  }

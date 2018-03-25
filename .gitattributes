@@ -1,0 +1,10 @@
+# (binary is a macro for -text -diff)
+*.zip binary
+*.jpg binary
+*.png binary
+*.gif binary
+*.dat binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.xlsx binary
