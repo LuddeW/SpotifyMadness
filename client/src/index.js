@@ -1,5 +1,5 @@
 import './styles/main.scss'
 
-import router from './router'
+import { start } from './browser-router'
 
-router.showSection('search')
+start()

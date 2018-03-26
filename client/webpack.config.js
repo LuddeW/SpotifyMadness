@@ -30,7 +30,8 @@ const WEBPACK_CONFIG = {
 
   output: {
     path: DEST,
-    filename: '[name].js'
+    filename: '[name].js',
+    publicPath: '/'
   },
 
   devServer: {
@@ -57,7 +58,8 @@ const WEBPACK_CONFIG = {
       {
         test: /\.s?css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'postcss-loader',
           'sass-loader'

@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 </head>
 
 <body>
   <!-- Search -->
   <section
-    class="section section--is-active search"
+    class="search section"
     data-section="search"
   >
     <h1>Spotify Madness</h1>
@@ -36,17 +36,50 @@
       <li
         class="search__result-item"
         data-result-item
-      ></li>
+      >
+        <button
+          class="search__result-item-btn"
+          data-result-item-btn
+        >
+          <img
+            class="search__result-item-image"
+            data-result-item-image
+          />
+          <span
+            class="search__result-item-name"
+            data-result-item-name
+          ></span>
+        </button>
+      </li>
     </ul>
+  </section>
+
+
+  <!-- Fetch artist -->
+  <section
+    class="fetch-artist section"
+    data-section="fetch-artist"
+  >
+    <h1>Fetching artist</h1>
+  </section>
+
+
+  <!-- Fetch battle -->
+  <section
+    class="fetch-battle section"
+    data-section="fetch-battle"
+  >
+    <h1>Fetching battle</h1>
   </section>
 
 
   <!-- Battle -->
   <section
-    class="section battle"
+    class="battle section"
     data-section="battle"
   >
     <h1 data-artist-name></h1>
+    <img data-artist-image/>
 
     <div class="battle__items-container">
       <div class="battle__item">

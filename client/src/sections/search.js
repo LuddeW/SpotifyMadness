@@ -1,20 +1,32 @@
 import { get } from '../api'
-import router from '../router'
+import { showSection } from '../section-handler'
+import { go } from '../browser-router'
 
 export default class Search {
-  inputEl = document.querySelector('[data-search-input]')
-  resultListEl = document.querySelector('[data-result-list]')
-  resultItemTemplateEl = document.querySelector('[data-result-item]')
+  sectionEl = document.querySelector('[data-section="search"]')
+  inputEl = this.sectionEl.querySelector('[data-search-input]')
+  resultListEl = this.sectionEl.querySelector('[data-result-list]')
+  resultItemTemplateEl = this.sectionEl.querySelector('[data-result-item]')
 
   pendingRequest = null
   artistsResult = null
 
   constructor() {
+    showSection('search')
+
     this.onResultItemClick = this.onResultItemClick.bind(this)
+    this.onSearchInput = this.onSearchInput.bind(this)
 
-    this.resultListEl.removeChild(this.resultItemTemplateEl)
+    this.inputEl.addEventListener('input', this.onSearchInput)
+    this.inputEl.focus()
+    this.inputEl.value = ''
 
-    this.inputEl.addEventListener('input', this.onSearchInput.bind(this))
+    this.clearResultItems()
+  }
+
+  deactivate() {
+    this.resultListEl.appendChild(this.resultItemTemplateEl)
+    this.inputEl.removeEventListener('input', this.onSearchInput)
   }
 
   async onSearchInput() {
@@ -34,12 +46,13 @@ export default class Search {
   }
 
   onResultItemClick(event) {
-    const { artistId } = event.target.dataset
+    const element = event.target.closest('[data-result-item]')
+    const { artistId } = element.dataset
 
     const artist = this.artistsResult.find(artist => artist.id === artistId)
     console.log(artistId, artist)
 
-    router.showSection('battle', artist)
+    go(`battle/${artist.id}`, artist)
   }
 
   clearResultItems() {
@@ -58,10 +71,19 @@ export default class Search {
 
     artists.forEach(artist => {
       const element = resultItemTemplateEl.cloneNode(true)
-      element.innerHTML = artist.name
+
       element.dataset.artistId = artist.id
 
-      element.addEventListener('click', this.onResultItemClick)
+      const image = artist.images.reduce(
+        (res, cur) => (cur.width < res.width ? cur : res)
+      )
+
+      element.querySelector('[data-result-item-image]').src = image.url
+      element.querySelector('[data-result-item-name]').innerHTML = artist.name
+
+      element
+        .querySelector('[data-result-item-btn]')
+        .addEventListener('click', this.onResultItemClick)
 
       resultListEl.appendChild(element)
     })

@@ -1,11 +1,37 @@
 .search {
   &__input {
     border-bottom: 1px solid $black;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin: 3rem 0;
     width: 100%;
 
     &:focus {
       border-bottom-color: $blue;
+    }
+  }
+
+  &__result-item {
+    &-btn {
+      align-items: center;
+      background-color: #efefef;
+      cursor: pointer;
+      display: flex;
+      width: 100%;
+    }
+
+    &-image {
+      height: 80px;
+      margin-right: 1em;
+    }
+
+    &-name {
+      font-size: 1.5rem;
+    }
+
+    &:nth-child(2n) & {
+      &-btn {
+        background-color: #f8f8f8;
+      }
     }
   }
 }

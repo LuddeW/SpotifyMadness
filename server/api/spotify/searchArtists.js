@@ -25,6 +25,30 @@ module.exports = async function searchArtists(ctx) {
           width: 160
         }
       ]
+    },
+    {
+      name: 'Drake',
+      id: '3TVXtAsR1Inumwj472S9r4',
+      images: [
+        {
+          height: 640,
+          url:
+            'https://i.scdn.co/image/cb080366dc8af1fe4dc90c4b9959794794884c66',
+          width: 640
+        },
+        {
+          height: 320,
+          url:
+            'https://i.scdn.co/image/6bd672a0f33705eda4b543c304c21a152f393291',
+          width: 320
+        },
+        {
+          height: 160,
+          url:
+            'https://i.scdn.co/image/085ae2e76f402468fe9982851b51cf876e4f20fe',
+          width: 160
+        }
+      ]
     }
   ]
 }
