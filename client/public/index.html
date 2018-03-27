@@ -81,15 +81,85 @@
     <h1 data-artist-name></h1>
     <img data-artist-image/>
 
-    <div class="battle__items-container">
-      <div class="battle__item">
+    <div class="battle__songs-container">
+      <div
+        class="battle__song battle__song--is-a"
+        data-battle-song="a"
+      >
+        <div class="battle__song-image-container">
+          <img
+            class="battle__song-image"
+            data-song-image
+          />
+        </div>
 
+        <audio
+          controls
+          preload="auto"
+          data-song-audio
+        ></audio>
 
-        <div data-song-name></div>
-        <button>
+        <div
+          class="battle__song-name"
+          data-song-name
+        ></div>
 
+        <button
+          class="battle__song-select"
+          data-select-song
+        >
+          Select
         </button>
       </div>
+
+      <div
+        class="battle__song battle__song--is-b"
+        data-battle-song="b"
+      >
+        <div class="battle__song-image-container">
+          <img
+            class="battle__song-image"
+            data-song-image
+          />
+        </div>
+
+        <audio
+          controls
+          preload="auto"
+          data-song-audio
+        ></audio>
+
+        <div
+          class="battle__song-name"
+          data-song-name
+        ></div>
+
+        <button
+          class="battle__song-select"
+          data-select-song
+        >
+          Select
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Winner -->
+  <section
+    class="winner section"
+    data-section="winner"
+  >
+    <h1>Winner!</h1>
+
+    <img
+      data-song-image
+    />
+
+    <div
+      data-song-name
+    >
+
     </div>
   </section>
 </body>
