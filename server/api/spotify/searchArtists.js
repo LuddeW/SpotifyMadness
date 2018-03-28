@@ -1,54 +1,44 @@
+const fetch = require('node-fetch')
+const config = require('../../../config')
+
 module.exports = async function searchArtists(ctx) {
   const { query } = ctx.params
+  const accessToken = await getAccessToken()
+  const artists = await getArtists(query, accessToken)
+  ctx.body = artists
+}
 
-  ctx.body = [
-    {
-      name: 'Kendrick',
-      id: '2YZyLoL8N0Wb9xBt1NhZWg',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/3a836196bfb341f736c7fe2704fb75de53f8dfbb',
-          width: 640
-        },
-        {
-          height: 320,
-          url:
-            'https://i.scdn.co/image/5259c0496329b3f608a1ae0edb799cd2f8451acc',
-          width: 320
-        },
-        {
-          height: 160,
-          url:
-            'https://i.scdn.co/image/b772a78d4cb192268d6f601a78f21044c17d6dda',
-          width: 160
-        }
-      ]
-    },
-    {
-      name: 'Drake',
-      id: '3TVXtAsR1Inumwj472S9r4',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/cb080366dc8af1fe4dc90c4b9959794794884c66',
-          width: 640
-        },
-        {
-          height: 320,
-          url:
-            'https://i.scdn.co/image/6bd672a0f33705eda4b543c304c21a152f393291',
-          width: 320
-        },
-        {
-          height: 160,
-          url:
-            'https://i.scdn.co/image/085ae2e76f402468fe9982851b51cf876e4f20fe',
-          width: 160
-        }
-      ]
+getAccessToken().then(console.log)
+function getAccessToken() {
+  var token = config.clientId + ':' + config.clientSecret
+  var hashToken = Buffer.from(token).toString('base64')
+  return fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    body: 'grant_type=client_credentials',
+    headers: {
+      Authorization: 'Basic ' + hashToken,
+      'Content-Type': 'application/x-www-form-urlencoded'
     }
-  ]
+  })
+    .then(res => res.json())
+    .then(function(json) {
+      return json.access_token
+    })
+}
+
+function getArtists(query, accessToken) {
+  var artists = []
+  return fetch(
+    'https://api.spotify.com/v1/search?q=' + query + '&type=artist&limit=10',
+    {
+      headers: { Authorization: 'Bearer ' + accessToken }
+    }
+  )
+    .then(res => res.json())
+    .then(function(json) {
+      for (var i = 0; i < json.artists.items.length; i++) {
+        artists.push(json.artists.items[i].name)
+      }
+      return artists
+    })
 }
