@@ -1,5 +1,8 @@
 .section {
   display: none;
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 1rem;
 
   &--is-active {
     display: block;

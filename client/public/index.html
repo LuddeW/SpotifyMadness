@@ -8,25 +8,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Intro -->
+  <!-- Search -->
   <section
-    class="section section--is-active"
-    data-section="intro"
+    class="search section"
+    data-section="search"
   >
     <h1>Spotify Madness</h1>
+    <p>
+      Search for the artist or band you want to make a bracket with.
+    </p>
+
+    <input
+      class="search__input"
+      type="text"
+      placeholder="Enter artist or band name"
+      data-search-input
+    />
+
+    <ul
+      class="search__result-list"
+      data-result-list
+    >
+      <li
+        class="search__result-item"
+        data-result-item
+      >
+        <button
+          class="search__result-item-btn"
+          data-result-item-btn
+        >
+          <img
+            class="search__result-item-image"
+            data-result-item-image
+          />
+          <span
+            class="search__result-item-name"
+            data-result-item-name
+          ></span>
+        </button>
+      </li>
+    </ul>
   </section>
 
 
-  <!-- Login -->
+  <!-- Fetch artist -->
   <section
-    class="section login"
-    data-section="login"
+    class="fetch-artist section"
+    data-section="fetch-artist"
   >
-    <h1>Login</h1>
+    <h1>Fetching artist</h1>
+  </section>
+
+
+  <!-- Fetch battle -->
+  <section
+    class="fetch-battle section"
+    data-section="fetch-battle"
+  >
+    <h1>Fetching battle</h1>
+  </section>
+
+
+  <!-- Battle -->
+  <section
+    class="battle section"
+    data-section="battle"
+  >
+    <h1 data-artist-name></h1>
+    <img data-artist-image/>
+
+    <div class="battle__songs-container">
+      <div
+        class="battle__song battle__song--is-a"
+        data-battle-song="a"
+      >
+        <div class="battle__song-image-container">
+          <img
+            class="battle__song-image"
+            data-song-image
+          />
+        </div>
+
+        <audio
+          controls
+          preload="auto"
+          data-song-audio
+        ></audio>
+
+        <div
+          class="battle__song-name"
+          data-song-name
+        ></div>
+
+        <button
+          class="battle__song-select"
+          data-select-song
+        >
+          Select
+        </button>
+      </div>
+
+      <div
+        class="battle__song battle__song--is-b"
+        data-battle-song="b"
+      >
+        <div class="battle__song-image-container">
+          <img
+            class="battle__song-image"
+            data-song-image
+          />
+        </div>
+
+        <audio
+          controls
+          preload="auto"
+          data-song-audio
+        ></audio>
+
+        <div
+          class="battle__song-name"
+          data-song-name
+        ></div>
+
+        <button
+          class="battle__song-select"
+          data-select-song
+        >
+          Select
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Winner -->
+  <section
+    class="winner section"
+    data-section="winner"
+  >
+    <h1>Winner!</h1>
+
+    <img
+      data-song-image
+    />
+
+    <div
+      data-song-name
+    >
+
+    </div>
   </section>
 </body>
 

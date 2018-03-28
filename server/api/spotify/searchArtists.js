@@ -5,7 +5,7 @@ module.exports = async function searchArtists(ctx) {
   const { query } = ctx.params
   const accessToken = await getAccessToken()
   const artists = await getArtists(query, accessToken)
-  ctx.body = `You searched for ${artists}`
+  ctx.body = artists
 }
 
 getAccessToken().then(console.log)
