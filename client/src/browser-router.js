@@ -31,5 +31,7 @@ const _getActiveSectionName = pathname => {
       return 'search'
     case 'battle':
       return 'battle'
+    default:
+      return 'not-found'
   }
 }
