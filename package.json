@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "start:dev": "cross-env NODE_ENV=development nodemon --ignore client/ index.js | bunyan -o short",
-    "build": "cd client && npm run build",
-    "heroku-prebuild": "cd client && npm i"
+    "heroku-prebuild": "NODE_ENV=development cd client && npm i",
+    "heroku-postbuild": "cd client && npm run build"
   },
   "engines": {
     "node": "8.5.x"
