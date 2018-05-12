@@ -10,7 +10,7 @@ export const request = async (method, url) => {
   return response
     .clone()
     .json()
-    .catch(() => response.clonse().text())
+    .catch(() => response.clone().text())
 }
 
 export const get = url => request('GET', url)

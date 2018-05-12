@@ -19,3 +19,9 @@ $black: #111;
 
 // font
 $font-size-base: 16px;
+
+
+// Grid
+$grid-column: 64px;
+$grid-margin: 16px;
+$grid-width: $grid-column * 12 + $grid-margin * 12;

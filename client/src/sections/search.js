@@ -75,7 +75,8 @@ export default class Search {
       element.dataset.artistId = artist.id
 
       const image = artist.images.reduce(
-        (res, cur) => (cur.width < res.width ? cur : res)
+        (res, cur) => (cur.width < res.width ? cur : res),
+        { width: Infinity }
       )
 
       element.querySelector('[data-result-item-image]').src = image.url
