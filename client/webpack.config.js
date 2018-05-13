@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 /* eslint-enable */
 
 const { env } = process
@@ -49,6 +50,10 @@ const WEBPACK_CONFIG = {
   module: {
     rules: [
       {
+        test: /.vue$/,
+        loader: 'vue-loader'
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -59,7 +64,7 @@ const WEBPACK_CONFIG = {
         test: /\.s?css$/,
         use: [
           // MiniCssExtractPlugin.loader,
-          'style-loader',
+          'vue-style-loader',
           'css-loader',
           'postcss-loader',
           'sass-loader'
@@ -99,6 +104,7 @@ const WEBPACK_CONFIG = {
   },
 
   plugins: [
+    new VueLoaderPlugin(),
     new DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)

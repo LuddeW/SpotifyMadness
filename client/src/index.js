@@ -1,5 +1,15 @@
-import './styles/main.scss'
+import Vue from 'vue'
+import router from './router'
+import store from './store'
+import App from './App.vue'
 
-import { start } from './browser-router'
+const app = new Vue({
+  el: '#vue-app',
+  router,
+  store,
+  render: h => h(App)
+})
 
-start()
+if (process.env.NODE_ENV === 'development') {
+  window.app = app
+}

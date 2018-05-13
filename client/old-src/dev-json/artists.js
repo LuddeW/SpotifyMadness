@@ -1,6 +1,6 @@
 export default [
   {
-    name: 'Kendrick Lamar',
+    name: 'Kendrick',
     id: '2YZyLoL8N0Wb9xBt1NhZWg',
     images: [
       {

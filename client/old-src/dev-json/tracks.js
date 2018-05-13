@@ -603,6 +603,110 @@ export default [
   },
   {
     album: {
+      album_type: 'album',
+      artists: [
+        {
+          external_urls: {
+            spotify: 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'
+          },
+          href: 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg',
+          id: '2YZyLoL8N0Wb9xBt1NhZWg',
+          name: 'Kendrick Lamar',
+          type: 'artist',
+          uri: 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'
+        },
+        {
+          external_urls: {
+            spotify: 'https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ'
+          },
+          href: 'https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ',
+          id: '1Xyo4u8uXC1ZmMpatF05PJ',
+          name: 'The Weeknd',
+          type: 'artist',
+          uri: 'spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ'
+        },
+        {
+          external_urls: {
+            spotify: 'https://open.spotify.com/artist/7tYKF4w9nC0nq9CsPZTHyP'
+          },
+          href: 'https://api.spotify.com/v1/artists/7tYKF4w9nC0nq9CsPZTHyP',
+          id: '7tYKF4w9nC0nq9CsPZTHyP',
+          name: 'SZA',
+          type: 'artist',
+          uri: 'spotify:artist:7tYKF4w9nC0nq9CsPZTHyP'
+        }
+      ],
+      available_markets: [
+        'AD',
+        'AR',
+        'AT',
+        'AU',
+        'BE',
+        'BG',
+        'BO',
+        'BR',
+        'CA',
+        'CH',
+        'CL',
+        'CO',
+        'CR',
+        'CY',
+        'CZ',
+        'DE',
+        'DK',
+        'DO',
+        'EC',
+        'EE',
+        'ES',
+        'FI',
+        'FR',
+        'GB',
+        'GR',
+        'GT',
+        'HK',
+        'HN',
+        'HU',
+        'ID',
+        'IE',
+        'IL',
+        'IS',
+        'IT',
+        'JP',
+        'LI',
+        'LT',
+        'LU',
+        'LV',
+        'MC',
+        'MT',
+        'MX',
+        'MY',
+        'NI',
+        'NL',
+        'NO',
+        'NZ',
+        'PA',
+        'PE',
+        'PH',
+        'PL',
+        'PT',
+        'PY',
+        'RO',
+        'SE',
+        'SG',
+        'SK',
+        'SV',
+        'TH',
+        'TR',
+        'TW',
+        'US',
+        'UY',
+        'VN',
+        'ZA'
+      ],
+      external_urls: {
+        spotify: 'https://open.spotify.com/album/5f8pMn2A5d5lKMDapYbCmp'
+      },
+      href: 'https://api.spotify.com/v1/albums/5f8pMn2A5d5lKMDapYbCmp',
       id: '5f8pMn2A5d5lKMDapYbCmp',
       images: [
         {
@@ -625,268 +729,108 @@ export default [
         }
       ],
       name: 'Black Panther The Album Music From And Inspired By',
+      release_date: '2018-02-09',
+      release_date_precision: 'day',
+      type: 'album',
       uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
     },
+    artists: [
+      {
+        external_urls: {
+          spotify: 'https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg'
+        },
+        href: 'https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg',
+        id: '2YZyLoL8N0Wb9xBt1NhZWg',
+        name: 'Kendrick Lamar',
+        type: 'artist',
+        uri: 'spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg'
+      }
+    ],
+    available_markets: [
+      'AD',
+      'AR',
+      'AT',
+      'AU',
+      'BE',
+      'BG',
+      'BO',
+      'BR',
+      'CA',
+      'CH',
+      'CL',
+      'CO',
+      'CR',
+      'CY',
+      'CZ',
+      'DE',
+      'DK',
+      'DO',
+      'EC',
+      'EE',
+      'ES',
+      'FI',
+      'FR',
+      'GB',
+      'GR',
+      'GT',
+      'HK',
+      'HN',
+      'HU',
+      'ID',
+      'IE',
+      'IL',
+      'IS',
+      'IT',
+      'JP',
+      'LI',
+      'LT',
+      'LU',
+      'LV',
+      'MC',
+      'MT',
+      'MX',
+      'MY',
+      'NI',
+      'NL',
+      'NO',
+      'NZ',
+      'PA',
+      'PE',
+      'PH',
+      'PL',
+      'PT',
+      'PY',
+      'RO',
+      'SE',
+      'SG',
+      'SK',
+      'SV',
+      'TH',
+      'TR',
+      'TW',
+      'US',
+      'UY',
+      'VN',
+      'ZA'
+    ],
+    disc_number: 1,
+    duration_ms: 130613,
+    explicit: true,
+    external_ids: {
+      isrc: 'USUM71714096'
+    },
+    external_urls: {
+      spotify: 'https://open.spotify.com/track/3vKU0GTHo5nl3kTCYAiqc3'
+    },
+    href: 'https://api.spotify.com/v1/tracks/3vKU0GTHo5nl3kTCYAiqc3',
     id: '3vKU0GTHo5nl3kTCYAiqc3',
+    is_local: false,
     name: 'Black Panther',
+    popularity: 77,
     preview_url:
       'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '1',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '2',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '3',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '4',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '5',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '6',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '7',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
-    uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
-  },
-  {
-    album: {
-      id: '5f8pMn2A5d5lKMDapYbCmp',
-      images: [
-        {
-          height: 640,
-          url:
-            'https://i.scdn.co/image/dfc8859cfa4ac0a761742f6b64e45f4ea65ece50',
-          width: 640
-        },
-        {
-          height: 300,
-          url:
-            'https://i.scdn.co/image/5a722077548b7d48abfd93324592026337789a8e',
-          width: 300
-        },
-        {
-          height: 64,
-          url:
-            'https://i.scdn.co/image/955b112723eae662639f2322054b7a1cb8f4ad1a',
-          width: 64
-        }
-      ],
-      name: 'Black Panther The Album Music From And Inspired By',
-      uri: 'spotify:album:5f8pMn2A5d5lKMDapYbCmp'
-    },
-    id: '8',
-    name: 'Black Panther',
-    preview_url:
-      'https://p.scdn.co/mp3-preview/b64fe2a94b5093ee5e694aff06aeae30afcc7fa2?cid=774b29d4f13844c495f206cafdad9c86',
+    track_number: 1,
+    type: 'track',
     uri: 'spotify:track:3vKU0GTHo5nl3kTCYAiqc3'
   }
 ]

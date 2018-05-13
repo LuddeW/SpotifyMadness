@@ -35,10 +35,11 @@ function getArtists(query, accessToken) {
     }
   )
     .then(res => res.json())
-    .then(function(json) {
-      for (var i = 0; i < json.artists.items.length; i++) {
-        artists.push(json.artists.items[i].name)
-      }
-      return artists
-    })
+    .then(res => res.artists.items)
+  // .then(function(json) {
+  //   for (var i = 0; i < json.artists.items.length; i++) {
+  //     artists.push(json.artists.items[i].name)
+  //   }
+  //   return artists
+  // })
 }
